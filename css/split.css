@@ -1,0 +1,79 @@
+/* 
+    --------------------------------------------------------
+                        Split layout 
+    --------------------------------------------------------     
+*/
+.splitContainer {
+    width: 100%;
+    height: calc(100% - 50px);
+    height: -moz-calc(100% - 50px);
+    height: -webkit-calc(100% - 50px);
+    /* height: 100%; */
+    background-color: #272822;
+}
+
+#liveSection,
+#projectSection {
+    position: relative;
+    width: 100%;
+    /* border: 1px solid #aaa; */
+}
+
+#liveSection:before,
+#projectSection:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.1;
+    transform: translate(-50%, -50%);
+    font-family: FontAwesome;
+    text-shadow: 2px 2px 20px #111;
+    color: #00a8f3;
+}
+
+#liveSection:before {
+    font-size: 6em;
+    content: "\f108";
+}
+
+#projectSection:before {
+    font-size: 6em;
+    content: "\f56d";
+}
+
+.splitContainer .split {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.splitContainer .gutter {
+    border: 1px solid #444;
+    /* background-color: #575852; */
+    background-color: #222;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    /* vertical position center */
+}
+
+.splitContainer .gutter:hover {
+    background-color: #333;
+}
+
+.splitContainer .gutter.gutter-horizontal {
+    cursor: col-resize;
+    background-image: url('../grips/vertical.png');
+}
+
+.splitContainer .gutter.gutter-vertical {
+    cursor: row-resize;
+    background-image: url('../grips/horizontal.png');
+}
+
+.splitContainer .split.split-horizontal,
+.splitContainer .gutter.gutter-horizontal {
+    height: 100%;
+    float: left;
+}

@@ -1,0 +1,102 @@
+/* 
+    --------------------------------------------------------
+                    Main menu style 
+    --------------------------------------------------------     
+*/
+.clear {
+    clear: both;
+}
+
+.mainMenuContainer {
+    width: 100%;
+    border-bottom: 1px solid #333;
+    background-color: #272822;
+}
+
+.mainMenuRightSide {
+    position: relative;
+    width: 40%;
+    float: right;
+    border-left: 1px solid #444;
+    border-right: 1px solid #444;
+}
+
+.menuContainer {
+    position: relative;
+    width: 24%;
+    float: left;
+    margin: auto 0 0 0;
+    text-align: left;
+}
+
+.menuContainer ul li {
+    display: inline-block;
+    padding: 8px;
+    margin: 3px;
+    background-color: none;
+    color: #00a8f3;
+    font-weight: bold;
+    text-align: left;
+}
+
+.menuContainer ul li:hover {
+    background-color: #333;
+    color: #fff;
+    text-shadow: 2px 2px 40px #eee;
+}
+
+.splitButtonContainer {
+    position: relative;
+    float: left;
+}
+
+.splitButtonContainer ul li {
+    display: inline-block;
+    padding: 8px;
+    margin: 3px;
+    background-color: #272822;
+    color: #00a8f3;
+    font-weight: bold;
+    text-align: left;
+}
+
+.splitButtonContainer ul li:hover {
+    background-color: #333;
+    color: #fff;
+    text-shadow: 2px 2px 40px #eee;
+}
+
+.projectFullWidthIcon:before,
+.codeFullWidthIcon:before,
+.liveFullWidthIcon:before,
+.phpFullWidthIcon:before,
+.jsFullWidthIcon:before,
+.cssFullWidthIcon:before {
+    font-family: FontAwesome;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.projectFullWidthIcon:before {
+    content: "\f518";
+}
+
+.codeFullWidthIcon:before {
+    content: "\f121";
+}
+
+.liveFullWidthIcon:before {
+    content: "\f108";
+}
+
+.phpFullWidthIcon:before {
+    content: "\f13b";
+}
+
+.jsFullWidthIcon:before {
+    content: "\f3d3";
+}
+
+.cssFullWidthIcon:before {
+    content: "\f13c";
+}

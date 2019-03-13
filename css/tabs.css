@@ -1,0 +1,223 @@
+.tabContainer{
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    /*background-color: #262626;*/
+    /*background-color: rgba(0,168,243, 0.1);*/
+}
+
+.tabs{
+    position: relative;
+    width: 100%; 
+    /*background-color: #262626;*/
+    height: calc(100% - 33px);
+    height:-moz-calc(100% - 33px);
+    height:-webkit-calc(100% - 33px);
+    /*height: calc(100% - 5%);
+    height:-moz-calc(100% - 5%);
+    height:-webkit-calc(100% - 5%);*/
+
+    /*overflow: hidden;*/
+    /*overflow-x: auto;*/    
+    list-style-type: none;      
+}
+
+.tabs li{
+    float:left;
+    color: #ccc;
+    padding: 5px 16px;  
+    /*text-align: center;  */
+    /* background-color: #575852; */
+    transition: background-color 0.5s ease; 
+    z-index: 0;
+    border: 1px solid #444;
+}
+
+.tabs li.active {
+    background-color: #272822 !important;
+    color:#00a8f3 !important;
+}
+
+.tabs li:hover {
+    background-color: #444;
+    color: #00a8f3;
+    transition: color 0.5s ease-in;
+    /*transition: left 1s ease-in;*/
+}
+
+.tabs li.active:before {    
+    color: #00a8f3;   
+}
+
+.tabs li .deleteButton{
+    position: relative;
+    border: none;
+    background: none;
+    color: #999;
+    padding: 1px 5px;
+    left:6px;
+    z-index:0;
+    display:inline;
+}
+
+.tabs li .deleteButton:before{
+    font-family: FontAwesome;
+    font-size:12px;
+    content: "\f00d";
+    padding:0px 0px;
+    color:#ccc;
+}
+
+.tabs li:hover .deleteButton:before{
+    color:#00a8f3;
+}
+
+.tabs li.active .deleteButton:before{
+    color:#00a8f3;
+}
+
+.tabs li .tabPage{
+    position: absolute;
+    width: 100%;
+    top: 43px;
+    left: 0;
+    height: calc(100% - 10px);
+    height:-moz-calc(100% - 10px);
+    height:-webkit-calc(100% - 10px); 
+    background-color: #272822;
+    z-index: 1;
+}
+
+.tabs li:not(:first-child) > .tabPage{
+    display: none; 
+}
+
+.codeLogo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+.codeLogo:before{
+    font-family: FontAwesome;
+    content: '\f13b\f457\f13c\f3b8';
+    font-size: 5em; 
+    color: #00a8f3;
+    opacity: 0.3;
+    /*text-shadow: 1px 1px 30px #6f6f6f;*/
+}
+
+.cssCodeLogo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+.cssCodeLogo:before{
+    font-family: FontAwesome;
+    content: '\f13c';
+    font-size: 5em; 
+    color: #00a8f3;
+    opacity: 0.3;
+    /*text-shadow: 1px 1px 30px #6f6f6f;*/
+}
+
+.jsCodeLogo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+.jsCodeLogo:before{
+    font-family: FontAwesome;
+    content: '\f3b9';
+    font-size: 5em; 
+    color: #00a8f3;
+    opacity: 0.3;
+    /*text-shadow: 1px 1px 30px #6f6f6f;*/
+}
+
+.tabNavContainer{
+    position: absolute;
+    top:0;
+    right: 0;
+}
+
+.tabNavContainer .tabsPrev{
+    background-color: #262626;
+    border: 1px solid #444;
+    color: #00a8f3;    
+    /*text-shadow: 3px 3px 5px #000;*/
+}
+
+.tabNavContainer .tabsPrev:hover{
+    background-color: #333;
+    color: #fff;
+    text-shadow: 2px 2px 40px #eee;
+}
+
+.tabNavContainer .tabsPrev:before{
+    font-family: FontAwesome;
+    font-size: 16px;
+    content: '\f0d9';
+    display: block;
+    /* padding: 13px 15px;  */
+    padding: 10px;   
+}
+
+.tabNavContainer .tabsNext{
+    background-color: #262626;
+    border: 1px solid #444;
+    color: #00a8f3;
+    /*text-shadow: 3px 3px 5px #000; */
+}
+
+.tabNavContainer .tabsNext:hover{
+    background-color: #333;
+    color: #fff;
+    text-shadow: 2px 2px 40px #eee; 
+}
+
+.tabNavContainer .tabsNext:before{
+    font-family: FontAwesome;
+    font-size: 16px;
+    content: '\f0da';
+    display: block;
+    /* padding: 13px 15px;  */
+    padding: 10px;
+}
+
+.tabNavContainer .settingTab{
+    background-color: #262626;
+    border: 1px solid #444;
+    color: #00a8f3;  
+    /*text-shadow: 3px 3px 5px #000;  */
+}
+
+.tabNavContainer .settingTab:hover{
+    background-color: #333;
+    color: #fff;
+    text-shadow: 2px 2px 40px #eee; 
+}
+
+.tabNavContainer .settingTab:before{
+    font-family: FontAwesome;
+    font-size: 16px;
+    content: '\f0c9';
+    display: block;
+    /* padding: 13px 15px;  */
+    padding: 10px;
+}
+
+.dragBorder{
+    border-left : 1px solid #00a8f3 !important; 
+    border-right : 1px solid #00a8f3 !important;  
+    cursor: move; 
+    padding: 10px 26px;    
+}

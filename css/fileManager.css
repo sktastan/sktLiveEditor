@@ -1,0 +1,212 @@
+/* 
+    --------------------------------------------------------
+                        File manager menu 
+    --------------------------------------------------------     
+*/
+/* ------ File manager menu start ------ */
+.fileMenu{
+    /* width: 100%; */
+    list-style-type:none; 
+    position: relative;
+    width: 14%;
+    float: left;
+    margin: auto 0 0 0;
+    border-left: 1px solid #444;
+    border-right: 1px solid #444;
+    /* text-align: left; */
+    /* background-color: #575852; */
+    /* border-bottom: 1px solid #333 */
+}
+
+.fileMenu li{
+    position: relative;
+    display: inline-block;
+    /*list-style: none;*/
+    padding: 10px;
+    vertical-align: middle;
+    color:#00a8f3;
+}
+
+.fileMenu li:hover{
+    background-color: #333; 
+    color: #fff;
+    text-shadow: 2px 2px 40px #eee 
+}
+
+.fileMenu .addFolderIcon:before{
+    font-family: FontAwesome;
+    font-size:18px;
+    font-weight: bold; 
+    content: "\f65e";
+    padding:0px 0px;
+    /* color:#00a8f3; */
+}
+
+.fileMenu .addFileIcon:before{ 
+    font-family: FontAwesome;
+    font-size:18px;  
+    content: "\f477";
+    /*padding:0px 4px;*/
+    /* color:#00a8f3; */
+}
+
+.fileMenu .deleteIcon:before{ 
+    font-family: FontAwesome;
+    font-size:18px;  
+    content: "\f057";
+    padding:0px 4px;
+    /* color:#00a8f3; */
+}
+
+.fileMenu .openFolderIcon:before{ 
+    font-family: FontAwesome;
+    font-size:18px;  
+    content: "\f07c";
+    /* color:#00a8f3; */
+}
+
+.fileMenu .openFileIcon:before{ 
+    font-family: FontAwesome;
+    font-size:18px;  
+    content: "\f56f";
+    /* color:#00a8f3; */
+}
+
+.fileMenu .saveProjectIcon:before{ 
+    font-family: FontAwesome;
+    font-size:18px;  
+    content: "\f0c7";
+    /* color:#00a8f3; */
+}
+/* ------ File manager menu start ------ */
+
+/* ------ File tree start ------ */
+.fileManagerContainer .toggleButton{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    background: none;
+    color: #aaa
+}
+
+.fileManagerContainer .deleteButton{
+    position: absolute;
+    top: 10px;
+    right: 6px;
+    border: none;
+    padding: 0px 6px;
+    background: none;
+    border-radius:50px;
+    color:#00a8f3;   
+}
+
+.fileManagerContainer .deleteButton:hover{
+    color: #aaa
+}
+
+.fileManagerContainer .deleteButton:before{
+    font-family: FontAwesome;
+    font-size:100%;  
+    content: "\f00d";
+}
+
+.fileManagerContainer input[type = 'text']{
+    position:absolute; 
+    width: 100%;
+    border:1px solid #e6e6e6;
+    top:0px;
+    left:0px;
+    padding: 6px 0px;
+    outline: none;
+    background-color:#f6f6f6;
+    border-radius:20px;
+    text-align:center;
+    color:#aaa;
+    z-index: 100
+}
+
+.fileManagerContainer input[type = 'text']::selection {
+    background: #00a8f3;
+    color : #eee; 
+}
+
+.fileManagerTree{
+    width: 100%;
+    border: 1px solid #333;
+    padding: 0px 10px;
+    list-style-type:none;    
+    /* background-color: #575852;  */
+    background-color: #272822
+}
+
+.fileManagerTree li{
+    position: relative; 
+    display: block;
+    color: #ccc;
+    /*text-align: center;*/    
+    /*list-style: none;*/
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-bottom: 5px;    
+    transition: background-color 0.3s ease 0.1s;
+}
+
+.fileManagerTree li.active {
+    /*background-color: #272822 !important;*/
+    color: #00a8f3 !important;
+    font-size: 120%;
+    font-weight: bold !important;
+    transition: font-size 0.3s ease 0.1s; 
+}
+
+.fileManagerTree .folderIcon:before{
+    font-family: FontAwesome;
+    font-size:18px;
+    font-weight: bold; 
+    content: "\f07c\00a0";
+    /*padding:0px 0px;*/
+    margin-left: 6px;
+    margin-right: 4px;
+    color:#00a8f3;
+    vertical-align: middle;
+}
+
+.fileManagerTree .fileIcon:before{ 
+    font-family: FontAwesome;
+    font-size:18px;  
+    content: "\f15c";
+    padding-right: 5px;
+    color:#00a8f3;
+    vertical-align: middle;
+}
+
+.toggle{
+    display: none;
+}
+
+.opened{
+    position: absolute;
+    top: 4px;
+    left: 0;
+    border: none;
+    background: none;
+    color: #aaa
+}
+
+.opened:before{
+    font-family: FontAwesome;
+    font-size:20px;  
+    content: "\f0d7";
+    color:#00a8f3;
+}
+
+.closed:before{
+    position: relative;
+    font-family: FontAwesome;
+    font-size:20px;  
+    content: "\f0da";
+    padding:0px 0px 0px 5px;
+    color:#00a8f3;
+}
+/* ------ File tree end ------ */ 

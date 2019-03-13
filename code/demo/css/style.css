@@ -1,0 +1,9 @@
+p{
+    position: relative;
+    margin: 0 auto;
+    width:200px;
+    text-align: center;
+    padding:10px;
+    border: 1px solid orange;
+    color:orange 
+}
