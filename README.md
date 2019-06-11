@@ -1,1 +1,1 @@
-# sktLiveCodeEditor
+# Live code editor
